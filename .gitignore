@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output / caches
+dist/
+**/dist/
+.vite/
+**/.vite/
+*.tsbuildinfo
+
+# Local env/config/secrets for containerized agents
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+lucy.env
+lucy.*.env
+left/*.env
+right/*.env
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# Docker/container image exports and runtime state
+*.tar
+*.tar.gz
+*.tgz
+*.oci
+*.img
+*.image
+*.cid
+*.pid
+store/
+.backup-*/
+
+# Logs / local machine files
+*.log
+.logs/
+.DS_Store

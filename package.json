@@ -1,0 +1,19 @@
+{
+  "name": "dualing-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "launch": "bash scripts/launch.sh",
+    "dev": "concurrently -n server,web -c red,blue \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w server && npm run build -w web",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  }
+}
